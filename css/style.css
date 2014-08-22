@@ -1,5 +1,12 @@
+body{
+	margin-left: 10%;
+	margin-right: 10%;
+}
 #stats{
-	background: green;
-	border: 10px;
-	width : 30%;
+	width : 20%;
+	border: 1px solid black;
+}
+
+#title{
+	text-align: center;
 }
