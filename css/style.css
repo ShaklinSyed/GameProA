@@ -7,6 +7,15 @@ body{
 	border: 1px solid black;
 }
 
-#title{
+.title{
 	text-align: center;
+}
+
+
+#signup_container{
+	width : 30%;
+	text-align: center;
+	margin: 0 auto;
+	border :1px solid black;
+	padding: 10px 0;
 }
