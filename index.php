@@ -14,9 +14,13 @@ echo <<<_END
 			<h1 class="title">$appname</h1>
 
 		<div id="stats">
-			Money : $1000 <br />
-			Food : 1000
-		<div>		
+			Money : \$$balance 
+			<hr />
+			Resource <br />
+			Food : $food <br />
+			Wood : $wood
+		</div>	
+		<a href='finance.php'>Finance</a>
 	</body>
 </html>
 _END;
