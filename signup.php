@@ -8,6 +8,7 @@ echo <<<END
 
 <html>
 	<head>
+		<meta charset="utf-8" />
 		<title>$appname</title>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>

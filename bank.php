@@ -5,6 +5,7 @@ echo <<<_END
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8" />
 		<title>$appname</title>
 		<link rel="stylesheet" href="css/style.css" />
 		<script type="text/javascript" src="script/myscript.js"></script>
