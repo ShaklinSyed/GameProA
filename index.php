@@ -1,6 +1,6 @@
 <?php
 //index.php
-include_once 'functions.php';
+include_once 'lib.php';
 
 echo <<<_END
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ echo <<<_END
 			Food : $food <br />
 			Wood : $wood
 		</div>	
-		<a href='finance.php'>Finance</a>
+		<a href='bank.php'>Finance</a>
 	</body>
 </html>
 _END;

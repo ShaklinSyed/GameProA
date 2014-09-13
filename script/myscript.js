@@ -7,6 +7,8 @@ console.log(loan);
 var max = 30000;
 var limit = 0;
 
+
+//Adds money
 function add_money(){
 	if(max >limit){
 		bal = bal+1000;
@@ -17,13 +19,14 @@ function add_money(){
 		document.getElementById('loan').innerHTML = loan;
 	}
 	else{
-		document.write('Maximum Limit Reached');
+		alert('Maximum Limit Reached');
 	}
 	return bal;
 }
 
+//pays the loan
 function sub_money(){
-	if(bal > 1000){
+	if(bal >= 1000){
 		loan -=1000;
 		limit -=1000;
 		bal -= 1000;
@@ -32,6 +35,6 @@ function sub_money(){
 		document.getElementById('loan').innerHTML = loan;
 	}
 	else{
-		document.write('Balance is Less than 1000');
+		alert('Balance is Less than 1000');
 	}
 }
