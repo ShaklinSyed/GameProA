@@ -12,7 +12,7 @@ echo <<<_END
 	</head>
 
 	<body>
-			<h1 class="title">$appname</h1>
+		<h1 class="title">$appname</h1>
 
 		<div id="stats">
 			Money : \$$balance 

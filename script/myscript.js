@@ -1,40 +1,52 @@
 //Basic Javascript Functions
-
-var bal = document.getElementById('bal');
-console.log(bal);
-var loan = document.getElementById('loan');
-console.log(loan);
-var max = 30000;
-var limit = 0;
-
-
-//Adds money
-function add_money(){
-	if(max >limit){
-		bal = bal+1000;
-		loan +=1000;
-		limit +=1000;
-		console.log(bal, loan , max, limit);
-		document.getElementById('bal').innerHTML = bal;
-		document.getElementById('loan').innerHTML = loan;
-	}
-	else{
-		alert('Maximum Limit Reached');
-	}
-	return bal;
+function Account(){
+	this.bal = 0;
+	this.loan = 0;
+	this.max = 0;
 }
 
-//pays the loan
-function sub_money(){
-	if(bal >= 1000){
-		loan -=1000;
-		limit -=1000;
-		bal -= 1000;
-		console.log(bal, loan , max, limit);
-		document.getElementById('bal').innerHTML = bal;
-		document.getElementById('loan').innerHTML = loan;
-	}
-	else{
-		alert('Balance is Less than 1000');
-	}
+Account.prototype.getAccount = function(){
+	this.bal = Number(document.getElementById("bal").firstChild.nodeValue);
+	this.loan = Number(document.getElementById("loan").firstChild.nodeValue);
+	this.max = 10000;
 }
+
+Account.prototype.credit = function(){
+	if(this.loan < this.max){
+		this.bal +=1000;
+		this.loan +=1000;
+	}
+	this.displayHtml();
+}
+
+Account.prototype.debit = function(){
+	if(this.bal >= 1000){
+		this.bal -= 1000;
+		this.loan -=1000;
+	}
+	this.displayHtml();
+}
+
+Account.prototype.displayLog = function(){
+	console.log(this.bal);
+	console.log(this.loan);
+	console.log(this.max);
+}
+
+Account.prototype.displayHtml = function(){
+	document.getElementById('bal').firstChild.nodeValue = this.bal;
+	document.getElementById('loan').firstChild.nodeValue = this.loan;
+}
+
+var accnt = new Account();
+accnt.getAccount();
+
+
+function callDebit(){
+	accnt.debit();
+}
+
+function callCredit(){
+	accnt.credit();
+}
+

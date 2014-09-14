@@ -18,8 +18,8 @@ echo <<<_END
 				<form name="alpha">
 				Balance : <label id="bal">$balance</label><br />
 				Loan : <label id="loan">$loan</label><br />
-				<input type="button" value="Borrow Money" onClick="add_money();" />
-				<input type="button" value="Repay Money" onClick="sub_money();" />
+				<input type="button" value="Borrow Money" onClick="callCredit();" />
+				<input type="button" value="Repay Money" onClick="callDebit();" />
 				</form>
 			</div>
 	</body>

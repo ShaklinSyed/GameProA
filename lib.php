@@ -6,7 +6,7 @@
 $appname = "GameProA";
 
 $balance = 1000;
-$loan = 0;
+$loan = 1000;
 $food = 0;
 $wood = 0;
 ?>
